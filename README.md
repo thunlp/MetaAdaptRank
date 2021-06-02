@@ -2,8 +2,8 @@
 
 This repository provides the implementation of meta-learning to reweight synthetic weak supervision data described in the paper [**Meta Adaptive Neural Ranking with Contrastive Synthetic Supervision**]().
 
-- [1 Contrastive Supervision Synthesis (CTSyncSup)](#1-contrastive-supervision-synthesis)
-- Meta Learning to Reweight CTSyncSup
+- [1. Contrastive Supervision Synthesis (CTSyncSup)](#1-contrastive-supervision-synthesis)
+- [2. Meta Learning to Reweight CTSyncSup](#2-meta-learning-to-reweight)
 
 ## CONTACT
 
@@ -138,7 +138,7 @@ First download and prepare the following data into the `data` folder:
   ```
 
 
-## 2. Meta Learning to Reweight
+## 2 Meta Learning to Reweight
 
 
 ### 2.1 Data Preprocess
