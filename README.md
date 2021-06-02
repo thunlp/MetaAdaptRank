@@ -2,7 +2,7 @@
 
 This repository provides the implementation of meta-learning to reweight synthetic weak supervision data described in the paper [**Meta Adaptive Neural Ranking with Contrastive Synthetic Supervision**]().
 
-- [Contrastive Supervision Synthesis (CTSyncSup)](#1.-contrastive-supervision-synthesis)
+- [Contrastive Supervision Synthesis (CTSyncSup)](#contrastive-supervision-synthesis)
 - Meta Learning to Reweight CTSyncSup
 
 ## CONTACT
@@ -42,7 +42,7 @@ First download and prepare the following data into the `data` folder:
   - [BiomedNLP-PubMedBERT-base-uncased-abstract](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract) (for TREC-COVID)
 
 
-## 1. Contrastive Supervision Synthesis
+## Contrastive Supervision Synthesis
 
 ### 1.1 Source-domain NLG training
 
