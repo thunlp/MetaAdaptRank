@@ -1,0 +1,95 @@
+srun: fatal: No command given to execute.
+11/03/2020 05:51:40 AM: [ COMMAND: ../scripts/train.py --run_mode train --use_ml --use_infer --cv_number 0 --ranker_class bert --learning_rate 2e-5 --pretrain_model_dir /data/private/sunsi/dataset/pretrain_model --mode_name meta --target_dataset robust04 --train_dir /data/private/sunsi/experiments/MetaRanker/data/nlg_meta.rb04.1030 --target_dir /data/private/sunsi/experiments/MetaRanker/data/robust04 --save_dir /data/private/sunsi/experiments/MetaRanker/results --max_train_epochs 5 --per_gpu_train_batch_size 4 --per_gpu_dev_batch_size 4 --gradient_accumulation_steps 16 --per_gpu_test_batch_size 512 --num_warmup_steps 100 --display_iter 4 --eval_step 4 --eval_during_train --save_checkpoint ]
+11/03/2020 05:51:41 AM: [ Process rank: -1, device: cuda, n_gpu: 1, distributed training: False ]
+11/03/2020 05:51:41 AM: [ loading configuration file /data/private/sunsi/dataset/pretrain_model/bert-base-uncased/config.json ]
+11/03/2020 05:51:41 AM: [ Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+ ]
+11/03/2020 05:51:41 AM: [ Model name '/data/private/sunsi/dataset/pretrain_model/bert-base-uncased' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming '/data/private/sunsi/dataset/pretrain_model/bert-base-uncased' is a path, a model identifier, or url to a directory containing tokenizer files. ]
+11/03/2020 05:51:41 AM: [ Didn't find file /data/private/sunsi/dataset/pretrain_model/bert-base-uncased/added_tokens.json. We won't load it. ]
+11/03/2020 05:51:41 AM: [ Didn't find file /data/private/sunsi/dataset/pretrain_model/bert-base-uncased/special_tokens_map.json. We won't load it. ]
+11/03/2020 05:51:41 AM: [ Didn't find file /data/private/sunsi/dataset/pretrain_model/bert-base-uncased/tokenizer_config.json. We won't load it. ]
+11/03/2020 05:51:41 AM: [ loading file /data/private/sunsi/dataset/pretrain_model/bert-base-uncased/vocab.txt ]
+11/03/2020 05:51:41 AM: [ loading file None ]
+11/03/2020 05:51:41 AM: [ loading file None ]
+11/03/2020 05:51:41 AM: [ loading file None ]
+11/03/2020 05:51:41 AM: [ success loaded Bert-Tokenizer ! ]
+11/03/2020 05:51:41 AM: [ [USE META-LEARNING!] ]
+0it [00:00, ?it/s]22780it [00:00, 227793.70it/s]46675it [00:00, 231029.40it/s]70554it [00:00, 233303.18it/s]94707it [00:00, 235708.88it/s]118478it [00:00, 236305.57it/s]142918it [00:00, 238675.10it/s]177235it [00:00, 262667.81it/s]214830it [00:00, 288770.80it/s]253008it [00:00, 311538.80it/s]257975it [00:00, 282168.12it/s]
+11/03/2020 05:51:42 AM: [ [dev] success load triples = 257975 ]
+0it [00:00, ?it/s]249it [00:00, 213662.38it/s]
+0it [00:00, ?it/s]2594it [00:00, 25934.27it/s]5184it [00:00, 25893.11it/s]7285it [00:00, 23267.23it/s]9942it [00:00, 24167.00it/s]12513it [00:00, 24609.97it/s]15076it [00:00, 24905.18it/s]17286it [00:00, 22498.81it/s]19870it [00:00, 23375.24it/s]22168it [00:00, 24040.36it/s]
+11/03/2020 05:51:43 AM: [ success load qid2query = 249 ]
+11/03/2020 05:51:43 AM: [ success load docid2doc = 22168 ]
+11/03/2020 05:51:43 AM: [ [dev] success load tokenized corpus from /data/private/sunsi/experiments/MetaRanker/data/robust04/bert_tokenized ! ]
+0it [00:00, ?it/s]25564it [00:00, 255638.42it/s]62747it [00:00, 282081.43it/s]100000it [00:00, 334208.82it/s]
+11/03/2020 05:51:43 AM: [ [train] success load triples = 100000 ]
+0it [00:00, ?it/s]3504it [00:00, 18994.38it/s]32103it [00:00, 26383.82it/s]60663it [00:00, 36255.72it/s]82550it [00:00, 179020.50it/s]
+0it [00:00, ?it/s]2436it [00:00, 24356.42it/s]4890it [00:00, 24410.55it/s]6772it [00:00, 22411.75it/s]9212it [00:00, 22874.97it/s]11678it [00:00, 23382.56it/s]13628it [00:00, 20758.23it/s]15486it [00:00, 11765.01it/s]17862it [00:01, 13864.51it/s]20385it [00:01, 15954.54it/s]22483it [00:01, 16210.83it/s]24996it [00:01, 18142.08it/s]27437it [00:01, 19656.09it/s]29971it [00:01, 21073.43it/s]32258it [00:01, 19963.21it/s]34741it [00:01, 21209.61it/s]37175it [00:01, 22060.54it/s]39472it [00:02, 20631.42it/s]42000it [00:02, 21834.77it/s]44445it [00:02, 22557.23it/s]46964it [00:02, 23239.20it/s]49335it [00:02, 21303.21it/s]51759it [00:02, 22105.71it/s]54123it [00:02, 22543.46it/s]56417it [00:02, 20392.18it/s]58850it [00:02, 21304.45it/s]60503it [00:02, 20414.95it/s]
+11/03/2020 05:51:47 AM: [ success load qid2query = 82550 ]
+11/03/2020 05:51:47 AM: [ success load docid2doc = 60503 ]
+11/03/2020 05:51:47 AM: [ [train] success load tokenized corpus from /data/private/sunsi/experiments/MetaRanker/data/nlg_meta.rb04.1030/bert_tokenized ! ]
+0it [00:00, ?it/s]4992it [00:00, 107727.20it/s]
+11/03/2020 05:51:47 AM: [ [infer] success load data = 4992 ]
+11/03/2020 05:51:47 AM: [ ********************Initilize Model & Optimizer******************** ]
+11/03/2020 05:51:47 AM: [ Training model from scratch... ]
+11/03/2020 05:51:47 AM: [ loading configuration file /data/private/sunsi/dataset/pretrain_model/bert-base-uncased/config.json ]
+11/03/2020 05:51:47 AM: [ Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+ ]
+11/03/2020 05:51:47 AM: [ loading weights file /data/private/sunsi/dataset/pretrain_model/bert-base-uncased/pytorch_model.bin ]
+11/03/2020 05:51:50 AM: [ Weights of BertRanker not initialized from pretrained model: ['linear_layer.weight', 'linear_layer.bias'] ]
+11/03/2020 05:51:50 AM: [ Weights from pretrained model not used in BertRanker: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias'] ]
+11/03/2020 05:51:50 AM: [ warmup step = 100 | warm up proportion = 1.28% ]
+11/03/2020 05:51:55 AM: [ Training/evaluation parameters Namespace(adam_epsilon=1e-08, cache_pretrain_dir='/data/private/sunsi/dataset/pretrain_model/bert-base-uncased', checkpoint_folder='/data/private/sunsi/experiments/MetaRanker/results/train__meta_bert__robust04/1103-0551-40__meta_bert__robust04__fold_0/checkpoints', checkpoint_name=None, contain_dev_to_train=False, cuda=True, cv_folder='/data/private/sunsi/experiments/MetaRanker/results/train__meta_bert__robust04', cv_number=0, data_workers=0, dev_batch_size=4, device=device(type='cuda'), display_iter=4, do_lower_case=True, embed_dim=300, embed_path='/home/sunsi/dataset/word2vec/glove.6B.300d.txt', eval_during_train=True, eval_step=4, gradient_accumulation_steps=16, infer_batch_size=512, learning_rate=2e-05, load_checkpoint=False, load_optimizer=False, local_rank=-1, log_file='/data/private/sunsi/experiments/MetaRanker/results/train__meta_bert__robust04/1103-0551-40__meta_bert__robust04__fold_0/logging.txt', loss_class='pairwise', main_metric='ndcg_cut_20', max_doc_length=384, max_grad_norm=1.0, max_query_length=100, max_train_epochs=5, max_train_steps=-1, mode_name='meta_bert__robust04', n_gpu=1, n_kernels=21, no_cuda=False, num_labels=1, num_warmup_steps=100, per_gpu_analyze_batch_size=32, per_gpu_dev_batch_size=4, per_gpu_test_batch_size=512, per_gpu_train_batch_size=4, pretrain_checkpoint_folder=None, pretrain_model_dir='/data/private/sunsi/dataset/pretrain_model', pretrain_model_type='bert-base-uncased', ranker_class='bert', run_mode='train', save_checkpoint=True, save_checkpoint_step=None, save_dir='/data/private/sunsi/experiments/MetaRanker/results', save_folder='/data/private/sunsi/experiments/MetaRanker/results/train__meta_bert__robust04/1103-0551-40__meta_bert__robust04__fold_0', save_optimizer=False, seed=42, target_dataset='robust04', target_dir='/data/private/sunsi/experiments/MetaRanker/data/robust04/fold_0', train_batch_size=4, train_dir='/data/private/sunsi/experiments/MetaRanker/data/nlg_meta.rb04.1030', use_infer=True, use_ml=True, viso_folder='/data/private/sunsi/experiments/MetaRanker/results/train__meta_bert__robust04/1103-0551-40__meta_bert__robust04__fold_0/viso', vocab_size=400002, weight_decay=0.0) ]
+11/03/2020 05:51:55 AM: [ ************************************************** ]
+11/03/2020 05:51:55 AM: [   Num Train examples = 100000 ]
+11/03/2020 05:51:55 AM: [   Num Train Epochs = 5 ]
+11/03/2020 05:51:55 AM: [   Instantaneous batch size per GPU = 4 ]
+11/03/2020 05:51:55 AM: [   Total train batch size (w. parallel, distributed & accumulation) = 64 ]
+11/03/2020 05:51:55 AM: [   Gradient Accumulation steps = 16 ]
+11/03/2020 05:51:55 AM: [   Total optimization steps = 7810 ]
+11/03/2020 05:51:55 AM: [ ************************************************** ]
+11/03/2020 05:51:55 AM: [ run here ! ]
+11/03/2020 05:51:55 AM: [ Start Meta-Training ... ]
+  0%|          | 0/124960 [00:00<?, ?it/s]11/03/2020 05:51:56 AM: [ Init loss = 0.0 ]
