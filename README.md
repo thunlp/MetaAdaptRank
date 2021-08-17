@@ -248,4 +248,6 @@ First download and prepare the following data into the `data` folder:
 
 ## Results
 
-All TREC files listed in this paper can be found in [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/d02c9fee036448a2bc4d/).
+All TREC files listed in this paper can be download from [Here](https://thunlp.oss-cn-qingdao.aliyuncs.com/OpenMatch/MetaAdaptRank/TREC_Results.zip).
+
+<!-- https://cloud.tsinghua.edu.cn/d/d02c9fee036448a2bc4d/ -->
