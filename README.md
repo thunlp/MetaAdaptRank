@@ -49,7 +49,7 @@ First download and prepare the following data into the `data` folder:
 - We train two query generators (QG & ContrastQG) with the MS MARCO dataset using `train_nlg.sh` in the `run_shells` folder:
 
   ```
-  bash prepro_nlg_dataset.sh
+  bash train_nlg.sh
   ```
 
 - Optional arguments:
